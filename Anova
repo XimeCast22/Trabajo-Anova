@@ -1,0 +1,12 @@
+#Analisis de bacterias
+
+> library(ggplot2)
+
+> ggplot(bacteria_data) +
+aes(x = Bacteria, y = rep1, color = Bacteria ) +
+geom_jitter() +
+theme(legend.position = "none")
+
+ggplot(res_aov$residuals,
+id = FALSE · id = FALSE to remove point identification
+)
