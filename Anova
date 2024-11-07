@@ -1,4 +1,4 @@
-#Analisis de bacterias
+# Analisis de bacterias
 
 > library(ggplot2)
 
@@ -9,4 +9,27 @@ theme(legend.position = "none")
 
 ggplot(res_aov$residuals,
 id = FALSE · id = FALSE to remove point identification
+)
+
+shapiro.test(res_aov$residuals)
+  shapiro-wilk normality test
+
+data: res_aov$residuals
+w = 0.95831 ,  p-value = 0.2467
+
+boxplot(rep1 ~ muestras,
+     data = bacteria_data
+)
+
+ggbetweenstats(
+data = bacteria_data,
+x = muestras,
+y = rep1,
+type = "parametric",
+var.equal = TRUE,
+plot.type = "box",
+pairiwise.comparisons = TRUE,
+pairiwise.display = "significant",
+centrality.plotting = FALSE,
+bf.message = FALSE
 )
